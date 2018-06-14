@@ -1,0 +1,54 @@
+{% extends "base.html" %} 
+
+{% block scripts %}
+
+{{ super() }}
+<script>
+    function set_edit() {
+        $('#fn_{{ user.username }}').prop('disabled', false);
+
+    }
+    function save() {
+        $('#fn_{{ user.username }}').prop('disabled', true);
+    }
+</script>
+{% endblock %}
+{% block content %}
+<h1>{{ _('User') }}: {{ user.username }}</h1>
+<hr> 
+<ul class="list-group list-group-flush">
+    <li class="list-group-item active">{{ _('User details') }}</li>
+    <li class="list-group-item">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">{{ _('First name') }}:</span>
+            </div>
+            <input id="fn_{{ user.username }}" type="text" class="form-control" placeholder="{{ user.firstname }}" disabled>
+        </div>
+    </li>
+    <li id="ln_{{ user.username }}" class="list-group-item">{{ _('Last name') }}: {{ user.lastname }}</li>
+    <li class="list-group-item">{{ _('Email') }}: {{ user.email }}</li>
+    {% if user.about_me %}
+    <li class="list-group-item">
+    {{ _('About me') }}: {{ user.about_me }}
+    </li>
+{% endif %}
+{% if user.last_seen %}
+    <li class="list-group-item">{{ _('Last seen') }}: {{ moment(user.last_seen).format('LLL') }}</li>{% endif %}
+</ul>
+
+{% if user == current_user %}
+<p>
+    <a href="{{ url_for('main.edit_profile') }}">
+        {{ _('Edit your profile') }}
+    </a>
+    <br>
+    <a href="javascript:save()">
+        {{ _('Save') }}
+    </a>
+    <a href="javascript:set_edit()">
+        {{ _('Edit') }}
+    </a>
+</p>
+{% endif %}
+{% endblock %}

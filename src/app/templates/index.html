@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block content %}
+<h1>{{ _('Hi,') }} {{ current_user.username }}!</h1>
+<div>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.post.label }}
+            <br> {{ form.post(cols=32, rows=4) }}
+            <br> {% for error in form.post.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</div>
+{% for post in posts %}
+<div>
+    <p>{{ post.author.username }} {{ _('says') }}:
+        <span id="post{{ post.id }}">
+            <b>{{ post.body }}</b>
+        </span>
+        <br>
+        <br>
+         {% if post.language and post.language != g.locale %}
+        <span id="translation{{ post.id }}">
+            <a href="javascript:translate(
+                                                        '#post{{ post.id }}',
+                                                        '#translation{{ post.id }}',
+                                                        '{{ post.language }}',
+                                                        '{{ g.locale }}');">{{ _('Translate') }}</a>
+        </span>
+         {% endif %}
+    </p>
+</div>
+{% endfor %} {% endblock %}

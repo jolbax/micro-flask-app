@@ -1,0 +1,192 @@
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-06-14 14:24+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: app/__init__.py:15
+msgid "Please log in to access this page"
+msgstr ""
+
+#: app/auth/forms.py:9 app/auth/forms.py:16 app/main/forms.py:9
+msgid "Username"
+msgstr ""
+
+#: app/auth/forms.py:10 app/auth/forms.py:20
+msgid "Password"
+msgstr ""
+
+#: app/auth/forms.py:11
+msgid "Remember Me"
+msgstr ""
+
+#: app/auth/forms.py:12 app/auth/routes.py:27 app/templates/auth/login.html:8
+msgid "Sign In"
+msgstr ""
+
+#: app/auth/forms.py:17 app/templates/user.html:30
+msgid "Email"
+msgstr ""
+
+#: app/auth/forms.py:18 app/templates/user.html:24
+msgid "First name"
+msgstr ""
+
+#: app/auth/forms.py:19 app/templates/user.html:29
+msgid "Last name"
+msgstr ""
+
+#: app/auth/forms.py:22
+msgid "Repeat Password"
+msgstr ""
+
+#: app/auth/forms.py:23 app/auth/routes.py:48
+#: app/templates/auth/register.html:8
+msgid "Register"
+msgstr ""
+
+#: app/auth/forms.py:28 app/main/forms.py:21
+msgid "Please use a different username."
+msgstr ""
+
+#: app/auth/forms.py:33
+msgid "Please use a different email address"
+msgstr ""
+
+#: app/auth/routes.py:20
+msgid "Invalid username or password"
+msgstr ""
+
+#: app/auth/routes.py:46
+msgid "Congratulations, you are now a registred user!"
+msgstr ""
+
+#: app/main/forms.py:10 app/templates/user.html:33
+msgid "About me"
+msgstr ""
+
+#: app/main/forms.py:11 app/main/forms.py:27
+msgid "Submit"
+msgstr ""
+
+#: app/main/forms.py:26
+msgid "Say something"
+msgstr ""
+
+#: app/main/routes.py:33
+msgid "Your post is now live"
+msgstr ""
+
+#: app/main/routes.py:53
+msgid "Your changes have been saved"
+msgstr ""
+
+#: app/templates/base.html:28
+msgid "Error: Could not contact server."
+msgstr ""
+
+#: app/templates/base.html:37
+msgid "Welcome to Microblog"
+msgstr ""
+
+#: app/templates/base.html:55
+msgid "Microblog"
+msgstr ""
+
+#: app/templates/base.html:64
+msgid "Home"
+msgstr ""
+
+#: app/templates/base.html:70
+msgid "Log in"
+msgstr ""
+
+#: app/templates/base.html:74
+msgid "Profile"
+msgstr ""
+
+#: app/templates/base.html:77
+msgid "Log out"
+msgstr ""
+
+#: app/templates/edit_profile.html:2
+msgid "Edit Profile"
+msgstr ""
+
+#: app/templates/index.html:2
+msgid "Hi,"
+msgstr ""
+
+#: app/templates/index.html:18
+msgid "says"
+msgstr ""
+
+#: app/templates/index.html:30
+msgid "Translate"
+msgstr ""
+
+#: app/templates/user.html:17
+msgid "User"
+msgstr ""
+
+#: app/templates/user.html:20
+msgid "User details"
+msgstr ""
+
+#: app/templates/user.html:37
+msgid "Last seen"
+msgstr ""
+
+#: app/templates/user.html:43
+msgid "Edit your profile"
+msgstr ""
+
+#: app/templates/user.html:47
+msgid "Save"
+msgstr ""
+
+#: app/templates/user.html:50
+msgid "Edit"
+msgstr ""
+
+#: app/templates/auth/login.html:22
+msgid "New User?"
+msgstr ""
+
+#: app/templates/auth/login.html:23
+msgid "Click to Register!"
+msgstr ""
+
+#: app/templates/auth/register.html:12
+msgid "Already member?"
+msgstr ""
+
+#: app/templates/auth/register.html:13
+msgid "Click to Log-in!"
+msgstr ""
+
+#: app/templates/errors/404.html:3
+msgid "File Not Found"
+msgstr ""
+
+#: app/templates/errors/500.html:2
+msgid "An unexpected error has occurred"
+msgstr ""
+
+#: app/templates/errors/500.html:3
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr ""
+
