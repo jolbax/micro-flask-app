@@ -6,20 +6,20 @@ from app.models import User
 
 
 class LoginForm(FlaskForm):
-    username = StringField(_l('Username', validators=[DataRequired()]))
-    password = PasswordField(_l('Password', validators=[DataRequired()]))
+    username = StringField(_l('Username'), validators=[DataRequired()])
+    password = PasswordField(_l('Password'), validators=[DataRequired()])
     remember_me = BooleanField(_l('Remember Me'))
     submit = SubmitField(_l('Sign In'))
 
 
 class RegistrationForm(FlaskForm):
-    username = StringField(_l('Username', validators=[DataRequired()]))
-    email = StringField(_l('Email', validators=[DataRequired(), Email()]))
-    firstname = StringField(_l('First name', validators=[DataRequired()]))
-    lastname = StringField(_l('Last name', validators=[DataRequired()]))
-    password = PasswordField(_l('Password', validators=[DataRequired()]))
-    password2 = PasswordField(_l('Repeat Password', validators=[
-                              DataRequired(), EqualTo('password')]))
+    username = StringField(_l('Username'), validators=[DataRequired()])
+    email = StringField(_l('Email'), validators=[DataRequired(), Email()])
+    firstname = StringField(_l('First name'), validators=[DataRequired()])
+    lastname = StringField(_l('Last name'), validators=[DataRequired()])
+    password = PasswordField(_l('Password'), validators=[DataRequired()])
+    password2 = PasswordField(_l('Repeat Password'), validators=[
+                              DataRequired(), EqualTo('password')])
     submit = SubmitField(_('Register'))
 
     def validate_username(self, username):
